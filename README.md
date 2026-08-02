@@ -200,18 +200,6 @@ python eval.py \
   --weights model
 ```
 
-Other useful flags are:
-
-- `--device cuda`, `--device cuda:0`, or `--device cpu`
-- `--result-dir <path>` to change the CSV output directory
-- `--visualization-dir <path>` to change the overlay directory
-- `--skip-existing` to reuse complete existing CSV results
-- `--skip-incompatible` to skip a checkpoint whose weights do not match the model
-
-The evaluator writes one CSV per checkpoint and dataset under `eval_results/`. Each CSV contains per-case Dice, average surface distance (ASD), Hausdorff distance (HD), predicted/label AoP, absolute AoP error, and AoP validity information. Dataset and overall means are also printed to the terminal.
-
-Evaluation can run on CPU, although GPU inference is faster. Note that `eval.py` currently sets `CUDA_VISIBLE_DEVICES="1"` before selecting a device. Change or remove that line if GPU 1 is not the device you intend to use.
-
 ## Quick start
 
 ```bash
